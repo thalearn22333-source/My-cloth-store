@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Clothing Store" />
+    <meta
+      property="og:description"
+      content="Discover trendy fashion and premium clothing."
+    />
+    <meta property="og:image" content="images/banner.jpg" />
+    <meta
+      name="description"
+      content="Shop premium clothing, fashion accessories, and stylish outfits for men and women."
+    />
+
+    <meta
+      name="keywords"
+      content="clothing store, fashion, online shopping, shirts, jeans, dresses"
+    />
+    <title>About us</title>
+    <link rel="shortcut icon" href="./img/Cart-icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="bg-gray-800 text-white p-4">
+      <div class="container mx-auto px-4">
+        <!-- Top Bar -->
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="font-bold text-xl">Clothing Store</div>
+
+          <!-- Hamburger Button -->
+          <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-4">
+            <a href="home.html" class="p-2 rounded hover:bg-blue-500"> Home </a>
+
+            <select id="product" class="bg-gray-700 text-white p-2 rounded">
+              <option value="allProducts">All Products</option>
+              <option value="men">Men</option>
+              <option value="women">Women</option>
+            </select>
+
+            <a href="about.html" class="p-2 rounded hover:bg-blue-500">
+              About Us
+            </a>
+
+            <!-- Cart -->
+            <a
+              href="cart.html"
+              class="flex items-center gap-2 p-2 rounded hover:bg-blue-500"
+            >
+              <div class="relative">
+                <img
+                  class="h-6 rounded bg-white p-1"
+                  src="./img/cart-icon.png"
+                  alt="Cart"
+                />
+
+                <span
+                  class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2"
+                >
+                  0
+                </span>
+              </div>
+
+              <span>Cart</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden flex-col mt-4 space-y-3 bg-gray-700 p-4 rounded-lg"
+        >
+          <a href="home.html" class="block p-3 hover:bg-gray-600 rounded"
+            >Home</a
+          >
+
+          <select id="productMobile" class="bg-gray-600 text-white p-3 rounded">
+            <option value="allProducts">All Products</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+          </select>
+
+          <a href="about.html" class="block p-3 hover:bg-gray-600 rounded"
+            >About Us</a
+          >
+
+          <a
+            href="cart.html"
+            class="flex items-center gap-3 p-3 hover:bg-gray-600 rounded"
+          >
+            <img
+              class="h-6 rounded bg-white p-1"
+              src="./img/cart-icon.png"
+              alt="Cart"
+            />
+            <span>Cart</span>
+            <span
+              class="cart-count bg-red-500 text-white text-xs rounded-full px-2"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Section -->
+    <section class="bg-gray-100 py-10 md:py-16 px-4">
+      <div class="container mx-auto text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          About Our Clothing Store
+        </h1>
+
+        <p class="text-gray-600">
+          Bringing fashion, comfort, and style to everyone.
+        </p>
+      </div>
+    </section>
+    <!-- Our story -->
+    <section class="container mx-auto py-10 md:py-16 px-4 md:px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img
+          src="https://i.pinimg.com/1200x/bd/d0/94/bdd09439260b11313694e9301a11574b.jpg"
+          alt="Our Story"
+          class="w-full rounded-lg shadow-lg"
+        />
+
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">Our Story</h2>
+
+          <p class="text-gray-600">
+            Founded in 2026, Clothing Store was created with a mission to
+            provide trendy, affordable, and comfortable clothing for everyone.
+            We believe fashion should be accessible without compromising
+            quality.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- box -->
+    <section class="bg-gray-100 py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">Why Choose Us</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white p-6 rounded-lg shadow hover:bg-gray-200 transition duration-300 smooth"
+          >
+            <h3 class="font-bold text-xl mb-2">Quality Products</h3>
+            <p>Premium materials and modern designs.</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow hover:bg-gray-200 transition duration-300 smooth"
+          >
+            <h3 class="font-bold text-xl mb-2">Fast Delivery</h3>
+            <p>Reliable shipping for every order.</p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow hover:bg-gray-200 transition duration-300 smooth"
+          >
+            <h3 class="font-bold text-xl mb-2">Customer Support</h3>
+            <p>Friendly assistance whenever you need help.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our team -->
+    <section class="container mx-auto py-16 px-4 md:px-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10">
+        Meet Our Team
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <img
+            src="./img/facebook profile2.jpg"
+            class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover"
+          />
+          <h3 class="font-bold mt-4">Thoem Chantha (Tha404)</h3>
+          <p class="text-gray-500">Founder & Developer</p>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="./img/visal1.jpg"
+            class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover"
+          />
+          <h3 class="font-bold mt-4">Meas Sokvisal (Boy Sal)</h3>
+          <p class="text-gray-500">CEO & Single</p>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="./img/laiheng.jpg"
+            class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover"
+          />
+          <h3 class="font-bold mt-4">Phally Laiheng</h3>
+          <p class="text-gray-500">Frontend Developer</p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 mt-10">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Brand -->
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Clothing Store</h3>
+          <p class="text-gray-400">
+            Discover trendy fashion and premium quality clothing for every
+            style.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>
+              <a href="home.html" class="hover:text-white">Home</a>
+            </li>
+            <li>
+              <a href="cart.html" class="hover:text-white">Shopping Cart</a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-white">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Follow Us and Contact Us</h4>
+
+          <div class="flex justify-center md:justify-start gap-4 text-2xl">
+            <a
+              href="https://www.facebook.com/share/1JRaJUzhrQ/"
+              target="_blank"
+              class="hover:text-blue-500 transition"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://m.me/Tha404"
+              target="_blank"
+              class="hover:text-blue-700 transition"
+            >
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+
+            <a
+              href="https://t.me/ThaBreakLoop"
+              target="_blank"
+              class="hover:text-sky-400 transition"
+            >
+              <i class="fab fa-telegram"></i>
+            </a>
+
+            <a
+              href="https://github.com/thalearn22333-source"
+              target="_blank"
+              class="hover:text-sky-400 transition"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@ThaLearn"
+              target="_blank"
+              class="hover:text-pink-500 transition"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+        <p>© 2026 Tha Clothing Store. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

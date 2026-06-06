@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Clothing Store" />
+    <meta
+      property="og:description"
+      content="Discover trendy fashion and premium clothing."
+    />
+    <meta property="og:image" content="images/banner.jpg" />
+    <meta
+      name="description"
+      content="Shop premium clothing, fashion accessories, and stylish outfits for men and women."
+    />
+
+    <meta
+      name="keywords"
+      content="clothing store, fashion, online shopping, shirts, jeans, dresses"
+    />
+    <title>Cart - Clothing Store</title>
+    <link rel="shortcut icon" href="./img/left-arrow.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <div class="bg-gray-800 text-white p-4">
+      <div class="container mx-auto px-4">
+        <!-- Top Bar -->
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="font-bold text-xl">Clothing Store</div>
+
+          <!-- Hamburger Button -->
+          <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-4">
+            <a href="home.html" class="p-2 rounded hover:bg-blue-500"> Home </a>
+
+            <select id="product" class="bg-gray-700 text-white p-2 rounded">
+              <option value="allProducts">All Products</option>
+              <option value="men">Men</option>
+              <option value="women">Women</option>
+            </select>
+
+            <a href="about.html" class="p-2 rounded hover:bg-blue-500">
+              About Us
+            </a>
+
+            <!-- Cart -->
+            <a
+              href="cart.html"
+              class="flex items-center gap-2 p-2 rounded hover:bg-blue-500"
+            >
+              <div class="relative">
+                <img
+                  class="h-6 rounded bg-white p-1"
+                  src="./img/cart-icon.png"
+                  alt="Cart"
+                />
+
+                <span
+                  class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2"
+                >
+                  0
+                </span>
+              </div>
+
+              <span>Cart</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden flex-col mt-4 space-y-3 bg-gray-700 p-4 rounded-lg"
+        >
+          <a href="home.html" class="block p-3 hover:bg-gray-600 rounded"
+            >Home</a
+          >
+
+          <select id="productMobile" class="bg-gray-600 text-white p-3 rounded">
+            <option value="allProducts">All Products</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+          </select>
+
+          <a href="about.html" class="block p-3 hover:bg-gray-600 rounded"
+            >About Us</a
+          >
+
+          <a
+            href="cart.html"
+            class="flex items-center gap-3 p-3 hover:bg-gray-600 rounded"
+          >
+            <img
+              class="h-6 rounded bg-white p-1"
+              src="./img/cart-icon.png"
+              alt="Cart"
+            />
+            <span>Cart</span>
+            <span
+              class="cart-count bg-red-500 text-white text-xs rounded-full px-2"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Shop -->
+    <div class="container mx-auto p-4 bg-blue-100">
+      <a
+        href="home.html"
+        class="flex items-center gap-2 text-blue-600 hover:text-blue-700"
+      >
+        <img src="./img/left-arrow.png" class="w-6" />
+        <span>Back to Shop</span>
+      </a>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="container mx-auto p-6 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-6">Shopping Cart</h2>
+
+      <div id="cartItems" class="mb-8"></div>
+
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-bold flex justify-between">
+          Total:
+          <span id="totalPrice" class="text-green-600">$0.00</span>
+        </h3>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex gap-4 mt-8">
+        <button
+          onclick="printProductList()"
+          class="flex-1 px-8 py-4 bg-green-600 text-white rounded-xl hover:bg-green-700 font-medium text-lg"
+        >
+          🖨️ Print Product List
+        </button>
+        <button
+          onclick="clearCart()"
+          class="flex-1 px-8 py-4 bg-red-600 text-white rounded-xl hover:bg-red-700 font-medium text-lg"
+        >
+          Clear All Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 mt-10">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Brand -->
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Clothing Store</h3>
+          <p class="text-gray-400">
+            Discover trendy fashion and premium quality clothing for every
+            style.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>
+              <a href="home.html" class="hover:text-white">Home</a>
+            </li>
+            <li>
+              <a href="cart.html" class="hover:text-white">Shopping Cart</a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-white">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Follow Us and Contact Us</h4>
+
+          <div class="flex justify-center md:justify-start gap-4 text-2xl">
+            <a
+              href="https://www.facebook.com/share/1JRaJUzhrQ/"
+              target="_blank"
+              class="hover:text-blue-500 transition"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://m.me/Tha404"
+              target="_blank"
+              class="hover:text-blue-700 transition"
+            >
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+
+            <a
+              href="https://t.me/ThaBreakLoop"
+              target="_blank"
+              class="hover:text-sky-400 transition"
+            >
+              <i class="fab fa-telegram"></i>
+            </a>
+
+            <a
+              href="https://github.com/thalearn22333-source"
+              target="_blank"
+              class="hover:text-sky-400 transition"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@ThaLearn"
+              target="_blank"
+              class="hover:text-pink-500 transition"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+        <p>© 2026 Tha Clothing Store. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

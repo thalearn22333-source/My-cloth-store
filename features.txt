@@ -1,0 +1,8 @@
+Clothing Store E-Commerce Website
+Navbar
+Hero Banner
+Featured Products
+Categories
+Product Grid
+Product Detail Modal
+Footer

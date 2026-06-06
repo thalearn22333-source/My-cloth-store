@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Clothing Store" />
+    <meta
+      property="og:description"
+      content="Discover trendy fashion and premium clothing."
+    />
+    <meta property="og:image" content="images/banner.jpg" />
+    <meta
+      name="description"
+      content="Shop premium clothing, fashion accessories, and stylish outfits for men and women."
+    />
+
+    <meta
+      name="keywords"
+      content="clothing store, fashion, online shopping, shirts, jeans, dresses"
+    />
+    <title>Clothing Store</title>
+    <link rel="shortcut icon" href="./img/" type="imagex-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="bg-gray-800 text-white p-4">
+      <div class="container mx-auto px-4">
+        <!-- Top Bar -->
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="font-bold text-xl">Clothing Store</div>
+
+          <!-- Hamburger Button -->
+          <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-4">
+            <a href="home.html" class="p-2 rounded hover:bg-blue-500"> Home </a>
+
+            <select id="product" class="bg-gray-700 text-white p-2 rounded">
+              <option value="allProducts">All Products</option>
+              <option value="men">Men</option>
+              <option value="women">Women</option>
+            </select>
+
+            <a href="about.html" class="p-2 rounded hover:bg-blue-500">
+              About Us
+            </a>
+
+            <!-- Cart -->
+            <a
+              href="cart.html"
+              class="flex items-center gap-2 p-2 rounded hover:bg-blue-500"
+            >
+              <div class="relative">
+                <img
+                  class="h-6 rounded bg-white p-1"
+                  src="./img/cart-icon.png"
+                  alt="Cart"
+                />
+
+                <span
+                  class="cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2"
+                >
+                  0
+                </span>
+              </div>
+
+              <span>Cart</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden flex-col mt-4 space-y-3 bg-gray-700 p-4 rounded-lg"
+        >
+          <a href="home.html" class="block p-3 hover:bg-gray-600 rounded"
+            >Home</a
+          >
+
+          <select id="productMobile" class="bg-gray-600 text-white p-3 rounded">
+            <option value="allProducts">All Products</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+          </select>
+
+          <a href="about.html" class="block p-3 hover:bg-gray-600 rounded"
+            >About Us</a
+          >
+
+          <a
+            href="cart.html"
+            class="flex items-center gap-3 p-3 hover:bg-gray-600 rounded"
+          >
+            <img
+              class="h-6 rounded bg-white p-1"
+              src="./img/cart-icon.png"
+              alt="Cart"
+            />
+            <span>Cart</span>
+            <span
+              class="cart-count bg-red-500 text-white text-xs rounded-full px-2"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Hero section -->
+    <div class="hero-section">
+      <section
+        class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-10 py-10 md:py-20 bg-gray-100 gap-8"
+      >
+        <!-- Text -->
+        <div class="max-w-lg text-center md:text-left">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Discover Our Clothing Style
+          </h1>
+
+          <p class="text-gray-600 mb-6">
+            Explore our latest fashion collection with trendy outfits for every
+            occasion.
+          </p>
+
+          <button
+            class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
+          >
+            Shop Now
+          </button>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <img
+            src="./img/img1.jpg"
+            alt="Fashion"
+            class="w-full max-w-md md:max-w-xl lg:max-w-2xl rounded-lg shadow-lg"
+          />
+        </div>
+      </section>
+    </div>
+    <!-- Search bar -->
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search product name..."
+          class="flex-1 border rounded-l-lg p-3"
+        />
+
+        <button class="bg-blue-500 text-white px-5 rounded-r-lg">🔍</button>
+      </div>
+    </div>
+    <!-- Featured Products -->
+    <section class="max-w-7xl mx-auto py-10 px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product Card -->
+        <!-- cart 1 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/736x/a9/6c/98/a96c98fe3c2e91af228f58982bc4a518.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              Oversized T-Shirt
+            </h3>
+
+            <p class="text-gray-500 mt-1">Casual Wear</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl"> $25 </span>
+
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- cart 2 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/736x/60/ad/9a/60ad9aaf15a48a3771c5d0ec179bad0f.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">Hoodie</h3>
+            <p class="text-gray-500">Winter Collection</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$35</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- cart 3 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/736x/84/57/eb/8457eb3817292533631f380c2e0ea7aa.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">Jacket</h3>
+            <p class="text-gray-500">New Arrival</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$45</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 4 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/736x/96/09/64/96096497cd0404a9f2655b81eea56a6d.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">Sneakers</h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$55</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 5 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/6d/f2/6d/6df26d67bf2e27a3cfa829fe86744208.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">Red Cape Top</h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$57</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 6 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/9d/ef/82/9def829ebd819a88b3fc7b424c42dddb.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              Maroon Polka Dot Blouse
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$62</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 7 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/736x/69/96/8a/69968a0a876e05d2e08afd1ad9108d67.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              White Eyelet Blouse
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$46</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 8 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/736x/70/5a/74/705a74c736dff73b6c2006b5742f0366.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              White Lace Peasant Blouse
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$70</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 9 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/736x/69/b6/32/69b632e1e3ee0d475674188a606546fe.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              Blue Striped Oxford Shirt
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$89</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 10 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/e7/ec/b2/e7ecb2ed33f2915bf78a9c4816cab6e6.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              Navy Corduroy Shirt
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$95</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 11 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/736x/00/9c/ff/009cff97396a756ada6531647ed900ac.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              Khaki Oxford Shirt
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$89</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 12 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="men"
+        >
+          <img
+            src="https://i.pinimg.com/736x/a5/6d/23/a56d2379cfcc365276779486431deee6.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              White Oxford Shirt
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$85</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 13 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/736x/c8/8e/ba/c88eba732bea1da2d988b6455cf03a03.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              White Lace Babydoll Top
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$49</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- cart 14 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/736x/0b/d1/be/0bd1be987dc751db3f78abf3b35ff601.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              White Smocked Blouse
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$45</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 15 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/736x/4e/93/e7/4e93e7851cdc7a697c1665c3715fe911.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              White Off-Shoulder Top
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$52</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart 16 -->
+        <div
+          class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition"
+          data-category="women"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/3e/ab/0a/3eab0a205e7807f4b934da8812be3207.jpg"
+            alt="Product"
+            class="w-full h-72 object-cover"
+          />
+
+          <div class="p-4">
+            <h3 class="product-name text-lg font-semibold">
+              Black Puff Sleeve Peplum Top
+            </h3>
+            <p class="text-gray-500">Best Seller</p>
+
+            <div class="flex justify-between items-center mt-4">
+              <span class="price font-bold text-xl">$59</span>
+              <button
+                class="add-to-cart bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Add Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 mt-10">
+      <div
+        class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left"
+      >
+        <!-- Brand -->
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Clothing Store</h3>
+          <p class="text-gray-400">
+            Discover trendy fashion and premium quality clothing for every
+            style.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>
+              <a href="home.html" class="hover:text-white">Home</a>
+            </li>
+            <li>
+              <a href="cart.html" class="hover:text-white">Shopping Cart</a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-white">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h4 class="text-lg font-semibold mb-3">Follow Us and Contact Us</h4>
+
+          <div class="flex justify-center md:justify-start gap-4 text-2xl">
+            <a
+              href="https://www.facebook.com/share/1JRaJUzhrQ/"
+              target="_blank"
+              class="hover:text-blue-500 transition"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://m.me/Tha404"
+              target="_blank"
+              class="hover:text-blue-700 transition"
+            >
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+
+            <a
+              href="https://t.me/ThaBreakLoop"
+              target="_blank"
+              class="hover:text-sky-400 transition"
+            >
+              <i class="fab fa-telegram"></i>
+            </a>
+
+            <a
+              href="https://github.com/thalearn22333-source"
+              target="_blank"
+              class="hover:text-sky-400 transition"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@ThaLearn"
+              target="_blank"
+              class="hover:text-pink-500 transition"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+        <p>© 2026 Tha Clothing Store. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
